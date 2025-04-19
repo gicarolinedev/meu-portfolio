@@ -393,4 +393,120 @@ main {
     align-items: center;
     margin-bottom: 8px;
   }
-  
+/* RESPONSIVIDADE GERAL */
+
+@media (max-width: 1024px) {
+  .text-left, .text-right {
+    position: static;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .text-right {
+    margin-top: 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .img-fundo {
+    position: relative;
+    top: 0;
+    object-fit: cover;
+    max-height: none;
+    width: 100%;
+  }
+
+  .imagem-polaroid {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+
+  .text-left, .text-right {
+    font-size: 16px;
+  }
+
+  .texto-sobre {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-group {
+    width: 90%;
+  }
+
+  .projeto {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 20px;
+  }
+
+  .projeto img {
+    width: 100%;
+  }
+
+  .projeto .descricao {
+    font-size: 16px;
+  }
+
+  .btn-voltar {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .skills h2, .container h1 {
+    font-size: 2rem;
+  }
+
+  .skill-group h3 {
+    font-size: 1.2rem;
+  }
+
+  .skill-group ul {
+    font-size: 1rem;
+  }
+
+  .projeto h3 {
+    font-size: 1.4rem;
+  }
+
+  .projeto p {
+    font-size: 0.95rem;
+  }
+}
