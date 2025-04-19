@@ -1,446 +1,72 @@
-/* fontes importadas */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik+Doodle+Triangles&display=swap');
+document.addEventListener("DOMContentLoaded", function () {
+  // Botões de navegação
+  const botoes = {
+    sobre: document.getElementById("btn-sobre"),
+    projetos: document.getElementById("btn-projetos"),
+    skills: document.getElementById("btn-skills"),
+    contato: document.getElementById("btn-contato")
+  };
 
-/* Ocultar as seções quando estiver na página inicial */
-.hidden {
-    display: none;
+  // Seções do site
+  const secoes = {
+    sobre: document.getElementById("sobre"),
+    projetos: document.getElementById("projetos"),
+    skills: document.getElementById("skills"),
+    contato: document.getElementById("contato")
+  };
+
+  // Elementos da tela inicial
+  const main = document.querySelector("main");
+  const centralImage = document.querySelector(".central-image");
+  const overlay = document.querySelector(".overlay"); // caso tenha um fundo escuro, pode estar nulo
+
+  // Função para mostrar uma seção específica
+  function mostrarSecao(secao) {
+    // Oculta todas as seções
+    Object.values(secoes).forEach(sec => {
+      if (sec) sec.classList.add("hidden");
+    });
+
+    // Oculta a página inicial
+    if (main) main.classList.add("hidden");
+    if (centralImage) centralImage.classList.add("hidden");
+    if (overlay) overlay.classList.add("hidden");
+
+    // Mostra a seção selecionada
+    if (secoes[secao]) secoes[secao].classList.remove("hidden");
   }
-  
-  #sobre.hidden {
-    display: none;
+
+  // Voltar para a tela inicial
+  function voltar() {
+    // Esconde todas as seções
+    Object.values(secoes).forEach(sec => {
+      if (sec) sec.classList.add("hidden");
+    });
+
+    // Mostra a tela inicial
+    if (main) main.classList.remove("hidden");
+    if (centralImage) centralImage.classList.remove("hidden");
+    if (overlay) overlay.classList.remove("hidden");
   }
-  
-  #projetos.hidden {
-    display: none;
+
+  // Ativa todos os botões com id="btn-voltar"
+  function setupVoltar() {
+    const botoesVoltar = document.querySelectorAll(".btn-voltar");
+    botoesVoltar.forEach(btn => {
+      btn.addEventListener("click", voltar);
+    });
   }
-  
-  #skills.hidden {
-    display: none;
-  }
-  
-  #contato.hidden {
-    display: none;
-  }
-  
-/* Reset e fontes */
-* {
-    margin: 0; 
-    padding: 0;
-    box-sizing: border-box;
-}
-  
-body, html {
-    height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    position: relative;
-}
-
-.img-fundo {
-    position: absolute;
-    top: 6%;
-    left: 0;
-    width: 100%; 
-    max-height: 100vh; 
-    object-fit: contain;
-    z-index: -1;
-}
-
-
-/* textos esquerda */
-.tech-title {
-  position: center;
-  font-size: 15px;
-  font-weight: bold;
-  color: black;
-  font-family: 'IBM Plex Mono', monospace;
-  margin: 15px 0 10px;
-}
-
-.text-left {
-  position: fixed;  
-  left: 5%;  
-  top: 30%;  
-  width: 20%;
-  font-size: 20px;
-  color: black;
-  font-family: 'IBM Plex Mono', monospace;
-  text-align: left;
-  padding: 15px;
-}
-
-/* tecnologias esquerda */
-.tech-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.tech-icons img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s ease;
-}
-
-.tech-icons img:hover {
-  transform: scale(1.2);
-}
-
-.text-right {
-  width: 20%;
-  position: absolute;
-  right: 0;
-  top: 30%;
-  font-size: 20px;
-  color: black;
-  font-family: 'IBM Plex Mono', monospace;
-  background-color: transparent;
-  padding: 15px;
-  text-align: right;
-  margin-top: 10%;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 60px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    backdrop-filter: blur(10px);
-    background-color: black;
-    z-index: 1000;
-    font-family: 'IBM Plex Mono';
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    color: #B36B6B;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: maroon;
-}
-
-/* Redes sociais */
-.social-icons a {
-    color: #C08081;
-    margin-left: 20px;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: maroon;
-}
-
-/* Conteúdo principal */
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Seção SOBRE */
-
-#sobre {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 90px;
-    flex-wrap: wrap;
-    background-color: #f5f5f5; /* cor de fundo leve como na imagem */
-    min-height: 100vh;
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-/* Texto à esquerda */
-.texto-sobre {
-    flex: 1 1 500px;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #222;
-    text-align: justify;
-}
-
-.texto-sobre h2 {
-    font-family: 'IBM Plex Mono';
-    font-size: 30px;
-    color: maroon;
-    text-align: center;
-}
-
-
-/* Imagem à direita */
-.imagem-polaroid {
-    flex: 0 0 400px;
-    text-align: center;
-}
-
-.imagem-polaroid img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.imagem-polaroid p {
-    font-size: 14px;
-    color: #555;
-    margin: 0;
-    font-style: italic;
-}
-
-/* Botão Voltar */
-
-.btn-voltar {
-    font-family: 'IBM Plex Mono';
-    color: white;
-    position: fixed;
-    bottom: 20px;         
-    left: 50%;            
-    transform: translateX(-50%); 
-    z-index: 1000;
-    background-color: maroon;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  #btn-voltar:hover {
-    background-color: #f2f2f2;
-  }
-  
-/* PÁGINA DE PROJETOS */
-  
-/* Para garantir que o layout de cada projeto seja bem ajustado */
-
-.container h1 {
-    font-family: 'IBM Plex Mono';
-    color: maroon;
-    text-align: center;
-    margin: 10px 0;
-    font-size: 2.5rem;
-}
-.projeto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 2rem;
-    max-width: 1100px;
-    margin: 4rem auto;
-    background-color: #fddddd;
-    border-radius: 16px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    flex-wrap: wrap;
-  }
-  
-  .projeto img {
-    max-width: 90rem;
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .projeto .descricao {
-    font-family: 'IBM Plex Mono';
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  .projeto h3 {
-    font-size: 2rem;
-    color: maroon;
-    margin-bottom: 1rem;
-  }
-  
-  .projeto p {
-    font-size: 1.1rem;
-    font-family: 'IBM Plex Mono';
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 1.5rem;
-  }
-  
-  .projeto a {
-    display: inline-block;
-    text-decoration: none;
-    background-color: maroon;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .projeto a:hover {
-    background-color: #3d2a24;
-  }
-  
-  @media (max-width: 768px) {
-    .projeto {
-      flex-direction: column;
-      text-align: center;
-      padding: 1.5rem;
+  // Adiciona eventos aos botões de navegação
+  for (const chave in botoes) {
+    if (botoes[chave]) {
+      botoes[chave].addEventListener("click", function (event) {
+        event.preventDefault();
+        mostrarSecao(chave);
+      });
     }
-  
-    .projeto img {
-      max-width: 90%;
-    }
-  
-    .projeto .descricao {
-      padding-top: 1.5rem;
-    }
-  
-    .projeto h3 {
-      font-size: 1.6rem;
-    }
-  
-    .projeto p {
-      font-size: 1rem;
-    }
-  }  
-
-/*SKILLS*/
-.skills {
-    font-family: 'IBM Plex Mono', monospace;
-    text-align: center;
-    background-color: #fff8f8;
-    padding: 60px 20px;
-  }
-  
-  .skills h2 {
-    font-size: 2.5rem;
-    color: maroon;
-    margin-bottom: 40px;
-  }
-  
-  .skills-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .skill-group {
-    background-color: #fff;
-    border: 2px solid #eebcbc;
-    border-radius: 12px;
-    padding: 20px;
-    width: 250px; /* largura fixa para manter lado a lado */
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-  }
-  
-  .skill-group:hover {
-    transform: scale(1.03);
-  }
-  
-  .skill-group h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #5a3e36;
-    margin-bottom: 15px;
-    background-color: #eebcbc;
-    border-radius: 8px;
-    padding: 8px 0;
-  }
-  
-  .skill-group ul {
-    list-style: none;
-    padding: 0;
-    font-size: 1.1rem;
-    color: #333;
-  }
-  
-  .skill-group ul li::before {
-    content: "✔️ ";
-    margin-right: 8px;
-    color: #5a3e36;
   }
 
-  .skill-group ul li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-
-  /* Responsividade geral */
-@media (max-width: 768px) {
-  /* Ajuste da imagem de fundo */
-  .img-fundo {
-    top: 0;
-    object-fit: cover;
-    height: 100vh;
-  }
-
-  /* Ajuste do texto da esquerda */
-  .text-left {
-    position: static;
-    width: 90%;
-    margin: 20px auto;
-    text-align: center;
-    font-size: 16px;
-  }
-
-  /* Ajuste do texto da direita */
-  .text-right {
-    position: static;
-    width: 90%;
-    margin: 20px auto;
-    text-align: center;
-    font-size: 16px;
-  }
-
-  /* Navbar mais compacta */
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  /* Ícones */
-  .tech-icons {
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .tech-icons img {
-    width: 32px;
-    height: 32px;
-  }
-}
+  // Inicia botões de voltar
+  setupVoltar();
+});
