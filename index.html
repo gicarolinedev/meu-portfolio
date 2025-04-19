@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio Giovanna</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <div class="fundo-inicial">
+      <img src="https://raw.githubusercontent.com/gicarolinedev/meu-portfolio/main/assets/images/frontpic.png" alt="Imagem Inicial" class="img-fundo">
+      
+    <!-- elementos da esquerda -->
+    <div class="text-left">
+      <p><i>construindo pontes entre educação e tecnologia!</i></p>
+      <h2 class="tech-title">PRINCIPAIS TECNOLOGIAS</h2>
+      <div class="tech-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python">
+      </div>
+    </div>
+    </div>
+
+    <!-- elementos da direita -->
+    <div class="text-right">
+      <p>
+        <b>da sala de aula pro mundo do código!</b><br>
+        descobri na programação um novo jeito de <i>cuidar, criar e incluir.</i>
+      </p>
+    </div>
+  </main>
+
+  <!-- Navbar e imagem -->
+  <div class="overlay">
+    <header>
+      <div class="central-image"></div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a id="btn-sobre" class="nav-link" href="#">SOBRE</a></li>
+          <li><a id="btn-projetos" class="nav-link" href="#">PROJETOS</a></li>
+          <li><a id="btn-skills" class="nav-link" href="#">SKILLS</a></li>
+          <li><a href="#contato">CONTATO</a></li>
+        </ul>
+
+        <div class="social-icons">
+          <a href="https://github.com/gicarolinedev" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/giovanna-caroline-11875b2b8/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/giocarolinec/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Seção SOBRE -->
+  <section id="sobre" class="hidden">
+    <button class="btn-voltar">Voltar</button>
+    <div class="texto-sobre">
+      <h2>SOBRE MIM</h2>
+      <p><em>E aí, dev!</em> Se você chegou aqui, prazer, sou a <strong><em>Giovanna</em></strong>!</p>
+      <p>Sou educadora e estou traçando meu caminho na tecnologia. Minha jornada começou na sala de aula, onde descobri o poder transformador do conhecimento. Com o tempo, percebi que a tecnologia poderia ser uma extensão desse propósito, permitindo criar soluções inovadoras, acessíveis e inclusivas.</p>
+      <p>Hoje, uno minha experiência na educação com o mundo do código, desenvolvendo projetos que colocam as pessoas no centro. Meu foco está na inclusão, na criatividade e no impacto social.</p>
+      <p>Acredito que cada linha de código pode ser uma ponte para oportunidades, conectando pessoas e abrindo novos caminhos. Mais do que construir sistemas, vejo a tecnologia como uma ferramenta para transformar vidas.</p>
+      <b>Cada projeto que desenvolvo carrega esse propósito:</b> <em>cuidar, ensinar e inovar.</em>
+    </div>
+    <div class="imagem-polaroid">
+      <img src="https://github.com/gicarolinedev/meu-portfolio/blob/main/assets/images/aboutme.png?raw=true" alt="Giovanna sorrindo em uma foto estilo polaroid">
+    </div>
+  </section>
+
+  <!-- Seção PROJETOS -->
+  <section id="projetos" class="hidden">
+    <div class="container">
+      <h1>Meus Projetos</h1>
+      <button class="btn-voltar">Voltar</button>
+
+      <div class="lista-projetos">
+        <!-- Projeto 1 -->
+        <div class="projeto">
+          <img src="https://github.com/gicarolinedev/meu-portfolio/blob/main/assets/images/devhacksfront.png?raw=true" alt="Dev Hacks Projeto">
+          <div class="descricao">
+            <h3>DEV HACKS</h3>
+            <p>
+              O <strong>Dev Hacks</strong> é um projeto pessoal criado com o objetivo de facilitar o acesso a códigos simples e diretos para desenvolvedores iniciantes. 
+              A ideia surgiu de uma necessidade própria como programadora em formação: encontrar soluções rápidas para problemas comuns do dia a dia. 
+              A plataforma reúne "hacks" de código com tecnologias como <strong>React.js, Tailwind CSS, CSS</strong> e outras ferramentas amplamente utilizadas, organizadas de forma intuitiva para consulta rápida.
+            </p>
+            <a href="https://seulinkdoprojeto.com" target="_blank">Ver Projeto</a>
+          </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="projeto" data-categoria="backend">
+          <img src="https://via.placeholder.com/300x200" alt="Projeto 2: API de Tarefas" class="projeto-img">
+          <h2>Projeto 2: API de Tarefas</h2>
+          <p>Descrição do projeto de API backend.</p>
+          <a href="https://linkdoproj2.com" target="_blank">Ver Projeto</a>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="projeto" data-categoria="frontend">
+          <img src="https://via.placeholder.com/300x200" alt="Projeto 3: Site Responsivo" class="projeto-img">
+          <h2>Projeto 3: Site Responsivo</h2>
+          <p>Descrição do projeto de site responsivo.</p>
+          <a href="https://linkdoproj3.com" target="_blank">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção SKILLS -->
+  <section id="skills" class="hidden">
+    <div class="skills">
+      <button class="btn-voltar">Voltar</button>
+      <h2>Minhas Skills</h2>
+
+      <div class="skills-container">
+        <!-- Front-End -->
+        <div class="skill-group">
+          <h3>Front-End</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Tailwind</li>
+          </ul>
+        </div>
+
+        <!-- Back-End -->
+        <div class="skill-group">
+          <h3>Back-End</h3>
+          <ul>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+
+        <!-- Outras -->
+        <div class="skill-group">
+          <h3>Outras</h3>
+          <ul>
+            <li>Git & GitHub</li>
+            <li>Figma</li>
+            <li>Postman</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
