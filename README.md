@@ -9,7 +9,7 @@ Esse projeto foi desenvolvido com o objetivo de apresentar quem sou, meus princi
 
 Este portfólio é um espaço onde compartilho minha jornada da sala de aula para o universo do código. Cada detalhe foi pensado para refletir minha essência, propósito e paixão por educação, inclusão e tecnologia.
 
-![Imagem inicial do portfólio](https://github.com/gicarolinedev/meu-portfolio/blob/main/assets/images/front-portfolio-screenshot.png?raw=true)
+![Imagem inicial do portfólio](https://github.com/gicarolinedev/meu-portfolio/blob/main/assets/images/frontportfolio-screenshot.png?raw=true)
 
 ---
 
