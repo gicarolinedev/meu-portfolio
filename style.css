@@ -63,7 +63,7 @@ body {
 }
 
 .text-left {
-  position: fixed;  
+  position: relative;  
   left: 5%;  
   top: 30%;  
   width: 20%;
@@ -94,7 +94,7 @@ body {
 
 .text-right {
   width: 20%;
-  position: absolute;
+  position: relative;
   right: 0;
   top: 30%;
   font-size: 20px;
