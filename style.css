@@ -4,32 +4,33 @@
 /* Ocultar as seções quando estiver na página inicial */
 .hidden {
     display: none;
-  }
-  
-  #sobre.hidden {
+}
+
+#sobre.hidden {
     display: none;
-  }
-  
-  #projetos.hidden {
+}
+
+#projetos.hidden {
     display: none;
-  }
-  
-  #skills.hidden {
+}
+
+#skills.hidden {
     display: none;
-  }
-  
-  #contato.hidden {
+}
+
+#contato.hidden {
     display: none;
-  }
-  
+}
+
 /* Reset e fontes */
 * {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-  
-body, html {
+
+body,
+html {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -45,8 +46,8 @@ body {
     position: absolute;
     top: 6%;
     left: 0;
-    width: 100%; 
-    max-height: 100vh; 
+    width: 100%;
+    max-height: 100vh;
     object-fit: contain;
     z-index: -1;
 }
@@ -54,56 +55,56 @@ body {
 
 /* textos esquerda */
 .tech-title {
-  position: center;
-  font-size: 15px;
-  font-weight: bold;
-  color: black;
-  font-family: 'IBM Plex Mono', monospace;
-  margin: 15px 0 10px;
+    position: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 15px 0 10px;
 }
 
 .text-left {
-  position: fixed;  
-  left: 5%;  
-  top: 30%;  
-  width: 20%;
-  font-size: 20px;
-  color: black;
-  font-family: 'IBM Plex Mono', monospace;
-  text-align: left;
-  padding: 15px;
+    position: fixed;
+    left: 5%;
+    top: 30%;
+    width: 20%;
+    font-size: 20px;
+    color: black;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: left;
+    padding: 15px;
 }
 
 /* tecnologias esquerda */
 .tech-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .tech-icons img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s ease;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
 }
 
 .tech-icons img:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .text-right {
-  width: 20%;
-  position: absolute;
-  right: 0;
-  top: 30%;
-  font-size: 20px;
-  color: black;
-  font-family: 'IBM Plex Mono', monospace;
-  background-color: transparent;
-  padding: 15px;
-  text-align: right;
-  margin-top: 10%;
+    width: 20%;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    font-size: 20px;
+    color: black;
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: transparent;
+    padding: 15px;
+    text-align: right;
+    margin-top: 10%;
 }
 
 /* Navbar */
@@ -172,7 +173,8 @@ main {
     gap: 5px;
     padding: 90px;
     flex-wrap: wrap;
-    background-color: #f5f5f5; /* cor de fundo leve como na imagem */
+    background-color: #f5f5f5;
+    /* cor de fundo leve como na imagem */
     min-height: 100vh;
     font-family: 'IBM Plex Mono', monospace;
 }
@@ -180,24 +182,29 @@ main {
 /* Baixar currículo */
 
 .curriculo {
-  width: 120px; 
+    width: 120px;
 
 
 }
- 
+
 .btn-download {
-  width: 120px; /* Tamanho do botão*/
-  font-family: 'IBM Plex Mono', monospace;
-  color: white; 
-  background-color: maroon; 
-  padding: 8px 24px; 
-  border: none; 
-  border-radius: 5px; 
-  margin-top: -30px; /* Distância do botão para a imagem */
-  margin-left: 150px; /*Envia a imagem para a direita */
-  text-decoration: none; 
-  display: inline-block; /* Para que o link se comporte como um bloco */
-  cursor: pointer; /* Mostra o cursor de botão */
+    width: 120px;
+    /* Tamanho do botão*/
+    font-family: 'IBM Plex Mono', monospace;
+    color: white;
+    background-color: maroon;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 5px;
+    margin-top: -30px;
+    /* Distância do botão para a imagem */
+    margin-left: 150px;
+    /*Envia a imagem para a direita */
+    text-decoration: none;
+    display: inline-block;
+    /* Para que o link se comporte como um bloco */
+    cursor: pointer;
+    /* Mostra o cursor de botão */
 }
 
 /* Texto à esquerda */
@@ -243,25 +250,25 @@ main {
     font-family: 'IBM Plex Mono';
     color: white;
     position: fixed;
-    bottom: 20px;         
-    left: 50%;            
-    transform: translateX(-50%); 
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
     background-color: maroon;
     padding: 12px 24px;
     border: none;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition: background-color 0.2s ease;
-  }
-  
-  #btn-voltar:hover {
+}
+
+#btn-voltar:hover {
     background-color: #f2f2f2;
-  }
-  
+}
+
 /* PÁGINA DE PROJETOS */
-  
+
 /* Para garantir que o layout de cada projeto seja bem ajustado */
 
 .container h1 {
@@ -271,6 +278,7 @@ main {
     margin: 10px 0;
     font-size: 2.5rem;
 }
+
 .projeto {
     display: flex;
     align-items: center;
@@ -283,36 +291,36 @@ main {
     border-radius: 16px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     flex-wrap: wrap;
-  }
-  
-  .projeto img {
+}
+
+.projeto img {
     max-width: 90rem;
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .projeto .descricao {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projeto .descricao {
     font-family: 'IBM Plex Mono';
     flex: 1;
     min-width: 300px;
-  }
-  
-  .projeto h3 {
+}
+
+.projeto h3 {
     font-size: 2rem;
     color: maroon;
     margin-bottom: 1rem;
-  }
-  
-  .projeto p {
+}
+
+.projeto p {
     font-size: 1.1rem;
     font-family: 'IBM Plex Mono';
     line-height: 1.8;
     color: #333;
     margin-bottom: 1.5rem;
-  }
-  
-  .projeto a {
+}
+
+.projeto a {
     display: inline-block;
     text-decoration: none;
     background-color: maroon;
@@ -321,35 +329,35 @@ main {
     border-radius: 8px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-  }
-  
-  .projeto a:hover {
+}
+
+.projeto a:hover {
     background-color: #3d2a24;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .projeto {
-      flex-direction: column;
-      text-align: center;
-      padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
     }
-  
+
     .projeto img {
-      max-width: 90%;
+        max-width: 90%;
     }
-  
+
     .projeto .descricao {
-      padding-top: 1.5rem;
+        padding-top: 1.5rem;
     }
-  
+
     .projeto h3 {
-      font-size: 1.6rem;
+        font-size: 1.6rem;
     }
-  
+
     .projeto p {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  }  
+}
 
 /*SKILLS*/
 .skills {
@@ -357,38 +365,39 @@ main {
     text-align: center;
     background-color: #fff8f8;
     padding: 60px 20px;
-  }
-  
-  .skills h2 {
+}
+
+.skills h2 {
     font-size: 2.5rem;
     color: maroon;
     margin-bottom: 40px;
-  }
-  
-  .skills-container {
+}
+
+.skills-container {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .skill-group {
+}
+
+.skill-group {
     background-color: #fff;
     border: 2px solid #eebcbc;
     border-radius: 12px;
     padding: 20px;
-    width: 250px; /* largura fixa para manter lado a lado */
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    width: 250px;
+    /* largura fixa para manter lado a lado */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
-  }
-  
-  .skill-group:hover {
+}
+
+.skill-group:hover {
     transform: scale(1.03);
-  }
-  
-  .skill-group h3 {
+}
+
+.skill-group h3 {
     font-size: 1.5rem;
     font-weight: 700;
     color: #5a3e36;
@@ -396,42 +405,44 @@ main {
     background-color: #eebcbc;
     border-radius: 8px;
     padding: 8px 0;
-  }
-  
-  .skill-group ul {
+}
+
+.skill-group ul {
     list-style: none;
     padding: 0;
     font-size: 1.1rem;
     color: #333;
-  }
-  
-  .skill-group ul li::before {
+}
+
+.skill-group ul li::before {
     content: "✔️ ";
     margin-right: 8px;
     color: #5a3e36;
-  }
+}
 
-  .skill-group ul li {
+.skill-group ul li {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
-  }
+}
 
-  /* TECNOLOGIAS UTILIZADAS */
-  .technologiess {
+/* TECNOLOGIAS UTILIZADAS */
+.technologiess {
     margin-top: 10px;
-  }
+}
 
-  .techologies-icons {
+.techologies-icons {
     display: flex;
-    gap: 10px; /* Distância entre os ícones */
+    gap: 10px;
+    /* Distância entre os ícones */
     flex-wrap: wrap;
     align-items: center;
     margin-top: 5px;
-  }
+}
 
-  .technologies-icons img {
-    width: 20px; /* Ajustando o tamanho dos ícones */
-    transition: transform 0.2s; /* Efeito de transição */
-  }
-  
+.technologies-icons img {
+    width: 20px;
+    /* Ajustando o tamanho dos ícones */
+    transition: transform 0.2s;
+    /* Efeito de transição */
+}
