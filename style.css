@@ -177,6 +177,29 @@ main {
     font-family: 'IBM Plex Mono', monospace;
 }
 
+/* Baixar currículo */
+
+.curriculo {
+  width: 120px; 
+
+
+}
+ 
+.btn-download {
+  width: 120px; /* Tamanho do botão*/
+  font-family: 'IBM Plex Mono', monospace;
+  color: white; 
+  background-color: maroon; 
+  padding: 8px 24px; 
+  border: none; 
+  border-radius: 5px; 
+  margin-top: -30px; /* Distância do botão para a imagem */
+  margin-left: 150px; /*Envia a imagem para a direita */
+  text-decoration: none; 
+  display: inline-block; /* Para que o link se comporte como um bloco */
+  cursor: pointer; /* Mostra o cursor de botão */
+}
+
 /* Texto à esquerda */
 .texto-sobre {
     flex: 1 1 500px;
@@ -393,3 +416,22 @@ main {
     align-items: center;
     margin-bottom: 8px;
   }
+
+  /* TECNOLOGIAS UTILIZADAS */
+  .technologiess {
+    margin-top: 10px;
+  }
+
+  .techologies-icons {
+    display: flex;
+    gap: 10px; /* Distância entre os ícones */
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  .technologies-icons img {
+    width: 20px; /* Ajustando o tamanho dos ícones */
+    transition: transform 0.2s; /* Efeito de transição */
+  }
+  
